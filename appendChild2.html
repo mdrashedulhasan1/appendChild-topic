@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .article{
+            background-color: aquamarine;
+            padding: 5px 10px;
+            margin: 5px 10px;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="blog">
+        <div class="article">
+            <h2>First Blog</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, aspernatur.</p>
+        </div>
+        <div class="article">
+            <h2>Second Blog</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, aspernatur.</p>
+        </div>
+        <div class="article">
+            <h2>Third Blog</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, aspernatur.</p>
+        </div>
+    </div>
+    <script>
+        const article = document.createElement('article');
+        article.classList.add('article');
+        const h2 = document.createElement('h2');
+        h2.innerText = 'Fourth Blog';
+        const p = document.createElement('p');
+        p.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, aspernatur.';
+        article.appendChild(h2);
+        article.appendChild(p);
+
+        const blog = document.getElementById('blog');
+        blog.appendChild(article);
+    </script>
+</body>
+</html>
